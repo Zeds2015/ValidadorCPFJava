@@ -2,7 +2,7 @@ package Projeto;
 public class SistemaValidadorDeCpf {
      private final String cpf;
      
-    public SistemaValidadorDeCpf(String cpf) {
+    public SistemaValidadorDeCpf(String cpf) throws IllegalAccessError {
         if(ValidaCpf(cpf)) this.cpf = cpf;
         else throw new IllegalAccessError("Erro, Cpf Inválido!");
     }
