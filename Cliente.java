@@ -6,7 +6,11 @@ public class Cliente {
     private SistemaValidadorDeCpf cpf;
     
     public void SetCpf(String cpf){
+        try{
         this.cpf = new SistemaValidadorDeCpf(cpf);
+        }catch(IllegalAccessError erro){
+            System.out.println("Erro: "+erro.getMessage());
+        }
     }
     public String GetNome(){
         return nome;
